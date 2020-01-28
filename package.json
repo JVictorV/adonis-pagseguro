@@ -1,0 +1,21 @@
+{
+	"name": "adonis-pagseguro",
+	"version": "0.1.0",
+	"description": "Adonis provider to manage pagseguro calls",
+	"main": "index.js",
+	"repository": "https://github.com/JVictorV/adonis-pagseguro",
+	"author": "JVictorV",
+	"license": "MIT",
+	"private": false,
+	"devDependencies": {
+		"@adonisjs/fold": "^4.0.9",
+		"eslint": "^6.8.0",
+		"eslint-config-node": "^4.0.0",
+		"eslint-config-prettier": "^6.10.0",
+		"eslint-plugin-import": "^2.20.0",
+		"eslint-plugin-node": "^11.0.0",
+		"eslint-plugin-prettier": "^3.1.2",
+		"prettier": "^1.19.1",
+		"eslint-config-airbnb-base": "^14.0.0"
+	}
+}
