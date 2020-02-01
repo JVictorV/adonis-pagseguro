@@ -1,7 +1,7 @@
 {
 	"name": "adonis-pagseguro",
-	"version": "0.1.0",
-	"description": "Adonis provider to manage pagseguro calls",
+	"version": "0.0.1-alpha.3",
+	"description": "Adonis provider to manage PagSeguro API calls",
 	"main": "index.js",
 	"repository": "https://github.com/JVictorV/adonis-pagseguro",
 	"author": "JVictorV",
@@ -17,5 +17,8 @@
 		"eslint-plugin-prettier": "^3.1.2",
 		"prettier": "^1.19.1",
 		"eslint-config-airbnb-base": "^14.0.0"
+	},
+	"dependencies": {
+		"@vwp/pagseguro-node": "2.0.0-20203101-1"
 	}
 }
