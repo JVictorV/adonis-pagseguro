@@ -1,4 +1,4 @@
-const { Card, PaymentMethods, RecurringPayment, Session } = require('@vwp/pagseguro-node');
+const { Card, PaymentMethods, RecurringPayment, Session, Notification } = require('@vwp/pagseguro-node');
 
 /**
  * @template T
@@ -112,8 +112,8 @@ class PagSeguro {
 
 	/**
 	 *
-	 * @param preApprovalCode
-	 * @param planReference
+	 * @param {string} preApprovalCode
+	 * @param {string} planReference
 	 * @param payment
 	 * @returns {Promise<string>}
 	 */
@@ -123,7 +123,7 @@ class PagSeguro {
 
 	/**
 	 *
-	 * @param preApprovalReference
+	 * @param {string} preApprovalReference
 	 * @param newStatus
 	 * @returns {Promise<boolean>}
 	 */
@@ -133,11 +133,20 @@ class PagSeguro {
 
 	/**
 	 *
-	 * @param preApprovalReference
+	 * @param {string} preApprovalReference
 	 * @returns {Promise<boolean>}
 	 */
 	async cancelSubscription(preApprovalReference) {
 		return RecurringPayment.cancelSubscription(preApprovalReference, this.email, this.token);
+	}
+
+	/**
+	 *
+	 * @param {string} notificationCode
+	 * @returns {Promise<Maybe<Object>>}
+	 */
+	async getNotificationData(notificationCode) {
+		return Notification.getNotification(notificationCode, this.email, this.token);
 	}
 }
 
