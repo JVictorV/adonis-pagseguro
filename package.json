@@ -1,6 +1,6 @@
 {
 	"name": "adonis-pagseguro",
-	"version": "0.0.1-alpha.4",
+	"version": "0.0.1-alpha.5",
 	"description": "Adonis provider to manage PagSeguro API calls",
 	"main": "index.js",
 	"repository": "https://github.com/JVictorV/adonis-pagseguro",
