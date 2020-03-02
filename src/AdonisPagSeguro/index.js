@@ -159,6 +159,15 @@ class PagSeguro {
 	async applyDiscount(preApprovalReference, discountType, value) {
 		return RecurringPayment.applyDiscount(preApprovalReference, discountType, value, this.email, this.token);
 	}
+
+	/**
+	 *
+	 * @param {string} preApprovalCode
+	 * @returns {Promise<Maybe<Object>>}
+	 */
+	async getPreApprovalNotificationData(preApprovalCode) {
+		return Notification.getPreApprovalNotification(preApprovalCode, this.email, this.token);
+	}
 }
 
 module.exports = PagSeguro;
