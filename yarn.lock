@@ -108,10 +108,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@vwp/pagseguro-node@2.0.0-20200220-0":
-  version "2.0.0-20200220-0"
-  resolved "https://registry.yarnpkg.com/@vwp/pagseguro-node/-/pagseguro-node-2.0.0-20200220-0.tgz#7387a966951d865097e4fe6eadb89c0540d6a3e7"
-  integrity sha512-lkslbi7Qa1KC67RwhSdQAvYR9VMLICQR1hVoVUr5PhI3uGUMZ+wIP5OPhwl545WeIOeCTxNCjEDoBfUadlJ55A==
+"@vwp/pagseguro-node@2.0.0-20200228-0":
+  version "2.0.0-20200228-0"
+  resolved "https://registry.yarnpkg.com/@vwp/pagseguro-node/-/pagseguro-node-2.0.0-20200228-0.tgz#7f81dbdd09d2f0001f9c5d6be37199c0ef879632"
+  integrity sha512-ZsrsIkw7uIEhYMNO+lM6D1ZKwnHMimquW8i34M4vXKFQnwv2YOYDLODAP5p2JkweVEXJnfCHqZr1MXLvT8PRBw==
   dependencies:
     node-fetch "^2.6.0"
     xml2json "^0.12.0"
