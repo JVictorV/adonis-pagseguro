@@ -19,6 +19,6 @@
 		"eslint-config-airbnb-base": "^14.0.0"
 	},
 	"dependencies": {
-		"@vwp/pagseguro-node": "2.0.0-20200304-0"
+		"@vwp/pagseguro-node": "2.0.0-20200304-1"
 	}
 }
