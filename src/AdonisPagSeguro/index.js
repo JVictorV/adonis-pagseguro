@@ -23,10 +23,11 @@ class PagSeguro {
 	}
 
 	/**
+	 * @param {boolean} reset
 	 * @returns {Promise<string>}
 	 */
-	async getSession() {
-		if (!this.session) {
+	async getSession(reset = false) {
+		if (!this.session || reset) {
 			this.session = await Session.getSession(this.email, this.token);
 		}
 
@@ -49,10 +50,20 @@ class PagSeguro {
 	/**
 	 *
 	 * @param {string} cardNumber
+	 * @param {boolean} retryOnInvalidSession
 	 * @returns {Promise<Maybe<string>>}
 	 */
-	async getCardFlag(cardNumber) {
-		return Card.getCardFlag(await this.getSession(), cardNumber);
+	async getCardFlag(cardNumber, retryOnInvalidSession = true) {
+		try {
+			return Card.getCardFlag(await this.getSession(), cardNumber);
+		} catch (error) {
+			if (error.message === 'Sessao nao encontrada no armazenamento' && retryOnInvalidSession) {
+				await this.getSession(true);
+				return this.getCardFlag(cardNumber, false);
+			}
+
+			throw error;
+		}
 	}
 
 	/**
